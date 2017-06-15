@@ -1,0 +1,37 @@
+<template name="formCadastro">
+    <h1 style="text-align:center">Cadastrar Rota</h1>
+    <br>
+    <br>
+    <div class="container">
+        <form id ="formulario" class="form-horizontal">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-1">
+                    <div class="form-group">
+                        <label for="origemCarona">Origem:</label>
+                        <input name="origemCarona" id="origemCarona" type="text" class="form-control" placeholder="rua de saida" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-1">
+                    <div class="form-group">
+                        <label for="destinoCarona">Destino:</label>
+                        <input name="destinoCarona" id="destinoCarona" type="text" class="form-control" placeholder="rua de chegada" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-md-offset-1">
+                    <div class="form-group">
+                        <label for="dataHoraCarona">Data/Hora:</label>
+                        <input name="dataHoraCarona" id="dataHoraCarona" type="datetime-local" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div style="text-align:center">
+                <button id="cadastrarCarona" class="btn btn-primary btn-lg">Cadastrar</button>
+            </div>
+        </form>
+    </div>
+</template>
