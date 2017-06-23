@@ -1,0 +1,6 @@
+Filtros de busca:
+	--> Não exibir caronas que já estão lotadas;
+	--> Não exibir caronas que já passaram 1 hora depois do horario;
+	--> Não exibir caronas ofertadas por mim;
+	--> 
+	

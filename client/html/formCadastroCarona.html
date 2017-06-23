@@ -1,9 +1,14 @@
 <template name="formCadastroCarona">
-    <h1 style="text-align:center">Cadastrar Carona</h1>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-3">
+            <h1>Cadastrar Carona</h1>
+        </div>
+    </div>
     <br>
     <br>
     <div class="container">
         <form class="formCadastroCarona form-horizontal">
+            <!-- Campo Origem -->
             <div class="row">
                 <div class="col-md-6 col-md-offset-1">
                     <div class="form-group">
@@ -12,6 +17,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Campo Destino -->
             <div class="row">
                 <div class="col-md-6 col-md-offset-1">
                     <div class="form-group">
@@ -20,17 +26,31 @@
                     </div>
                 </div>
             </div>
+            <!-- Campo Data/Hora e Quantidade de Passageiros -->
             <div class="row">
-                <div class="col-md-3 col-md-offset-1">
+                <div class="col-md-2 col-md-offset-1">
                     <div class="form-group">
                         <label for="dataHoraCarona">Data/Hora:</label>
                         <input name="dataHoraCarona" id="dataHoraCarona" type="datetime-local" class="form-control">
                     </div>
                 </div>
+                <div class="col-md-3 col-md-offset-1">
+                    <div class="form-group">
+                        <label for="quantPassageiros">Quant. Passageiros:</label>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <input name="quantPassageiros" id="quantPassageiros" type="number" class="form-control" min="0" max="4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <br>
-            <div style="text-align:center">
-                <button type="submit" id="cadastrarCarona" class="btn btn-primary btn-lg">Cadastrar</button>
+            <!-- Campo Botão Cadastrar -->
+            <div class="row">
+                <div class="col-md-3 col-md-offset-2">    
+                    <button type="submit" id="cadastrarCarona" class="btn btn-primary btn-lg btn-block">Cadastrar</button>
+                </div>
             </div>
         </form>
     </div>

@@ -1,6 +1,6 @@
 /* The main content */
 .main-content {
-    max-width: 700px;
+    max-width: 1200px;/*tamanho q ele ocupa da tela*/
     padding-top: 40px;
     padding-right: 40px;
     margin: 0 0 40px 250px;
@@ -36,6 +36,7 @@
 	margin: 0px 0px;
 	padding-bottom: 10px;
 	word-wrap: break-word;
+    text-align: center;
 }
 
 .meta {
