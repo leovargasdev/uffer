@@ -1,0 +1,120 @@
+<template name="minhasCaronas">
+    <!-- Caronas Ofertadas-->
+    <div id="caronaOfertada">
+        <!-- Titulo -->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h1>Minhas Caronas Ofertadas</h1>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            {{#each caronasOfertadas}}
+                <div class="col-md-6" id="info">
+                    <div class="joke">
+                        <!-- Campo Origem -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="meta">Origem: {{origemCarona}}</p>
+                            </div>
+                        </div>
+                        <!-- Campo Destino -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="meta">Destino: {{destinoCarona}}</p>
+                            </div>
+                        </div>
+                        <!-- Campo Data e hora -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p class="meta">Data: {{dataCarona}}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="meta">Hora: {{horaCarona}}</p>
+                            </div>
+                        </div>
+                        <!-- Campo Quant. Passageiros -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="meta">Quant. passageiros: {{quantPassageiros}}</p>
+                            </div>
+                        </div>
+                        <br>
+                        <!-- Campo Botão Excluir Carona -->
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-3"> 
+                                <button class="btn btn-warning btn-lg btn-block" id="remover-carona">Excluir Carona</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{else}}
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Você não tem nenhuma carona ofertada até o momento.</h4>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+    <!-- Caronas com Interesse-->
+    <div id="caronaPedida">
+        <!-- Titulo -->
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h1>Caronas Pedidas</h1>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            {{#each caronasPedidas}}
+                <div class="col-md-6" id="info">
+                    <div class="joke">
+                        <!-- Campo Origem -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="meta">Origem: {{origemCarona}}</p>
+                            </div>
+                        </div>
+                        <!-- Campo Destino -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="meta">Destino: {{destinoCarona}}</p>
+                            </div>
+                        </div>
+                        <!-- Campo Data e hora -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p class="meta">Data: {{dataCarona}}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="meta">Hora: {{horaCarona}}</p>
+                            </div>
+                        </div>
+                        <!-- Campo Quant. Passageiros -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="meta">Quant. passageiros: {{quantPassageiros}}</p>
+                            </div>
+                        </div>
+                        <br>
+                        <!-- Campo Botão Excluir Carona -->
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-3"> 
+                                <button class="btn btn-warning btn-lg btn-block" id="remover-interesse">Excluir Carona</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{else}}
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Você não teve interesse em nenhuma carona até o momento.</h4>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</template>

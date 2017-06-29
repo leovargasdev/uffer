@@ -11,7 +11,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2" id="info">
             <div class="joke">
-                <h1 class="joke-title">Rota do Usuário</h1>
+                <h1 class="joke-title">Ofertada por {{userOfertante}}</h1>
                 <br>
                 <!-- Campo Origem -->
                 <div class="row">
@@ -44,13 +44,17 @@
                 <!-- Campo Botão Pegar Carona -->
                 <div class="row">
                     <div class="col-md-4 col-md-offset-4">    
-                        <button type="submit" id="" class="btn btn-primary btn-lg btn-block">Pegar Carona</button>
+                        <button id="interesse-carona" class="btn btn-primary btn-lg btn-block">Pegar Carona</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     {{else}}
-	<h1>Não há caronas para exibir</h1>
+	   <div class="row">
+        <div class="col-md-12">
+            <h4>Não existe nenhuma carona ofertada até o momento.</h4>
+        </div>
+    </div>
 	{{/each}}
 </template>

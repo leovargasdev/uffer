@@ -1,11 +1,19 @@
 Template.feed.helpers({
 	caronas: function() {
-        //var now = new Date(); // data do sistema
-        //var horaSistema = (now.getHours() + ":" + now.getMinutes()).toString();
-        //var dataSistema = new Date(year, month, day);
-        //var dataSistema = (now.getFullYear() + "-" + (now.getMonth()+1) + "-" + now.getDate()).toString();
-		//var caronas = Uffer.find({dataCarona: {$gt: 2017-06-15}});
-		var caronas = Uffer.find({});
+        var ano = new Date().getFullYear();
+        var mes = new Date().getMonth() + 1;
+        var dia = new Date().getDate();
+        var totalDays = dia + mes*30 + ano*365;
+		var caronas = Uffer.find({tempoDias: {$gt: totalDays - 1}});
+        // condição in é quando for igual e gt quando for maior.
 		return caronas;
+	}
+});
+
+Template.feed.events({
+	"click #interesse-carona": function() {
+		Meteor.call("", this._id);
+		Bert.alert("Carona pedida com Sucesso", "success", "growl-top-right");
+        //Router.go("/minhasCaronas");
 	}
 });

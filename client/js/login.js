@@ -12,12 +12,10 @@ Template.login.events({
 	"submit .form-signin": function(event){
 		var email = trimInput(event.target.email.value);
 		var password = trimInput(event.target.password.value);
-
-		if(isNotEmpty(email) &&
+		if( isNotEmpty(email) &&
 			isNotEmpty(password) &&
 			isEmail(email) &&
 			isValidPassword(password)){
-
 			Meteor.loginWithPassword(email, password, function(err){
 				if(err) {
 					Bert.alert(err.reason, "danger", "growl-top-right");
@@ -27,9 +25,7 @@ Template.login.events({
 					Bert.alert("Você está logado", "success", "growl-top-right");
 				}
 			});
-
 		}
-
 		return false // Prevent Submit
 	}
 
